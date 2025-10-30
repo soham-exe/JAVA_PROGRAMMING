@@ -1,0 +1,37 @@
+/**
+ * Class Name: Logic
+ * Description: Contains the business logic to compare numbers.
+ * Author: SOHAM SACHIN SONAR
+ * Date: 29/10/2025
+ */
+class Logic 
+{
+    /**
+     * Method Name: findMax
+     * Description: Accepts two integers and finds the maximum of the two.
+     * @param   a   The first integer.
+     * @param   b   The second integer.
+     */
+    void findMax(int a, int b) 
+    {
+        // Write logic here
+    }
+}
+
+/**
+ * Class Name: Program
+ * Description: The main class to run the application.
+ * Author: SOHAM SACHIN SONAR
+ * Date: 29/10/2025
+ */
+class Program 
+{
+    /**
+     * Entry point function for the application
+     */
+    public static void main(String args[]) 
+    {
+        Logic obj = new Logic();
+        obj.findMax(20, 15);
+    }
+}
