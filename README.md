@@ -43,7 +43,7 @@ To compile and run a Java program, you need to have the Java Development Kit (JD
 ---
 
 ## Repository Structure
-
+```
 JAVA_PROGRAMMING/
 |
 ├── Assignments/
@@ -63,6 +63,8 @@ JAVA_PROGRAMMING/
 |   
 |
 └── README.md
+```
+
 ---
 
 ## Future Scope
