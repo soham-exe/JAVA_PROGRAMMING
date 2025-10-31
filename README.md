@@ -50,23 +50,17 @@ JAVA_PROGRAMMING/
 |   │
 |   ├── Assignment_16/
 |   │   ├── program16_1.java
-|   │   ├── program16_1.class
 |   │   ├── program16_2.java
-|   │   ├── program16_2.class
 |   │
 |   ├── Assignment_17/
 |   │   ├── program17_1.java
-|   │   ├── program17_1.class
 |   │   ├── program17_2.java
-|   │   ├── program17_2.class
-|   │
+|   
 |
 ├── Classwork/
 |   ├── program3.java
-|   ├── program3.class
 |   ├── program18.java
-|   ├── program18.class
-|   |
+|   
 |
 └── README.md
 
