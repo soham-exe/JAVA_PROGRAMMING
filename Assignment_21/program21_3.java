@@ -1,4 +1,3 @@
-package Assignment_21;
 
 /**
  * Class Name: Logic
@@ -11,11 +10,20 @@ class Logic
     /**
      * Method Name: displayFactors
      * Description: Accepts an integer and displays all of its factors.
-     * @param   num   The number whose factors are to be displayed.
+     *    num   The number whose factors are to be displayed.
      */
     void displayFactors(int num) 
     {
-        // Write logic here
+        int iCnt = 0;
+
+        for(iCnt = 1;iCnt <= (num/2);iCnt++)
+        {
+            if(num % iCnt == 0)
+            {
+                System.out.print(iCnt+" ");
+            }
+        }
+        System.out.print(num);
     }
 }
 

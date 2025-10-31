@@ -9,11 +9,17 @@ class Logic
     /**
      * Method Name: sumEvenNumbers
      * Description: Accepts an integer N and finds the sum of all even numbers up to N.
-     * @param   n   The upper limit for summing even numbers.
+     *    n   The upper limit for summing even numbers.
      */
     void sumEvenNumbers(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+        int iSum = 0;
+        for(iCnt = 2; iCnt <= n; iCnt+=2)
+        {
+            iSum += iCnt;
+        }
+        System.out.println(iSum);
     }
 }
 

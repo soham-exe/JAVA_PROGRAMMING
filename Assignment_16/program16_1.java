@@ -9,11 +9,17 @@ class Logic
     /**
      * Method Name: calculateSum
      * Description: Accepts an integer N and calculates the sum of the first N natural numbers.
-     * @param   n   The limit up to which the sum should be calculated.
+     * n  The limit up to which the sum should be calculated.
      */
     void calculateSum(int n) 
-    {
-        // Write logic here
+    {   
+        int iCnt = 0;
+        int iSum = 0;
+        for(iCnt = 1;iCnt <= n;iCnt++)
+        {
+            iSum += iCnt;
+        }
+        System.out.println(iSum);
     }
 }
 

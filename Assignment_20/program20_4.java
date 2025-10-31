@@ -9,11 +9,22 @@ class Logic
     /**
      * Method Name: findLargestDigit
      * Description: Accepts an integer and finds the largest digit within it.
-     * @param   num   The number to be processed.
+     *   num   The number to be processed.
      */
     void findLargestDigit(int num) 
     {
-        // Write logic here
+        int ilargest = 0;
+        int iDig = 0;
+        while (num != 0) 
+        {
+            iDig = (num % 10);
+            if(iDig > ilargest)
+            {
+                ilargest = iDig;
+            }
+            num /= 10;
+        }
+        System.out.println(ilargest);
     }
 }
 

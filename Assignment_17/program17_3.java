@@ -9,12 +9,23 @@ class Logic
     /**
      * Method Name: findMax
      * Description: Accepts two integers and finds the maximum of the two.
-     * @param   a   The first integer.
-     * @param   b   The second integer.
+     *    a   The first integer.
+     *    b   The second integer.
      */
     void findMax(int a, int b) 
     {
-        // Write logic here
+        if(a > b)
+        {
+            System.out.println(a+" is greater than "+b);
+        }
+        else if(b > a)
+        {
+            System.out.println(b+" is greater than "+a);
+        }
+        else
+        {
+            System.out.println("Both are equal");
+        }
     }
 }
 

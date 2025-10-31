@@ -9,11 +9,22 @@ class Logic
     /**
      * Method Name: displayGrade
      * Description: Accepts a student's marks and displays the corresponding grade.
-     * @param   marks   The marks obtained by the student.
+     *    marks   The marks obtained by the student.
      */
     void displayGrade(int marks) 
     {
-        // Write logic here
+        if(marks >= 70)
+        {
+            System.out.println("A - Grade");
+        }
+        else if(marks >= 50 )
+        {
+            System.out.println("B - Grade");
+        }
+        else
+        {
+            System.out.println("C - Grade");
+        }
     }
 }
 

@@ -9,11 +9,15 @@ class Logic
     /**
      * Method Name: printTable
      * Description: Accepts an integer and prints its multiplication table.
-     * @param   num   The number for which the table will be printed.
+     *    num   The number for which the table will be printed.
      */
     void printTable(int num) 
     {
-        // Write logic here
+        int iCnt = 0;
+        for(iCnt = 1;iCnt <= 10;iCnt++)
+        {
+            System.out.println(num*iCnt);
+        }
     }
 }
 

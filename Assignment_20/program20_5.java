@@ -9,11 +9,22 @@ class Logic
     /**
      * Method Name: findSmallestDigit
      * Description: Accepts an integer and finds the smallest digit within it.
-     * @param   num   The number to be processed.
+     *    num   The number to be processed.
      */
     void findSmallestDigit(int num) 
     {
-        // Write logic here
+        int iSmallest = 10;
+        int iDig = 0;
+        while (num != 0) 
+        {
+            iDig = (num % 10);
+            if(iDig < iSmallest)
+            {
+                iSmallest = iDig;
+            }
+            num /= 10;
+        }
+        System.out.println(iSmallest);
     }
 }
 

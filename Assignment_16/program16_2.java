@@ -9,11 +9,18 @@ class Logic
     /**
      * Method Name: checkEvenOdd
      * Description: Accepts an integer and checks whether it is even or odd.
-     * @param   num   The number to be checked.
+     *  num   The number to be checked.
      */
     void checkEvenOdd(int num) 
     {
-        // Write logic here
+        if(num % 2 == 0)
+        {
+            System.out.println("Even");
+        }
+        else
+        {
+            System.out.println("Odd");
+        }
     }
 }
 

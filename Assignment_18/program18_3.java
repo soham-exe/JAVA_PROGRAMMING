@@ -9,11 +9,15 @@ class Logic
     /**
      * Method Name: printOddNumbers
      * Description: Accepts an integer N and prints all odd numbers up to N.
-     * @param   n   The upper limit for printing odd numbers.
+     *    n   The upper limit for printing odd numbers.
      */
     void printOddNumbers(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+        for(iCnt = 1; iCnt <= n;iCnt += 2)
+        {
+            System.out.print(iCnt+"   ");
+        }
     }
 }
 

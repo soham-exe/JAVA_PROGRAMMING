@@ -9,11 +9,25 @@ class Logic
     /**
      * Method Name: checkPalindrome
      * Description: Accepts an integer and checks whether it is a palindrome or not.
-     * @param   num   The number to be checked.
+     *    num   The number to be checked.
      */
     void checkPalindrome(int num) 
-    {
-        // Write logic here
+    {   
+        String iPnum = "";
+        String sNum = String.valueOf(num);
+        while (num != 0) 
+        {
+            iPnum += (num % 10);
+            num /= 10;
+        }
+        if(iPnum.equals(sNum))
+        {
+            System.out.println("it is a palindrome");
+        }
+        else
+        {
+            System.out.println("it is not a palindrome");
+        }
     }
 }
 

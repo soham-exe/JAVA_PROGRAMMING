@@ -9,11 +9,17 @@ class Logic
     /**
      * Method Name: findFactorial
      * Description: Accepts an integer and finds its factorial using a for loop.
-     * @param   num   The number whose factorial is to be calculated.
+     *  num   The number whose factorial is to be calculated.
      */
     void findFactorial(int num) 
     {
-        // Write logic here
+        int iCnt = 0;
+        int iFact = 1;
+        for(iCnt = 1;iCnt <= num;iCnt++)
+        {
+            iFact *= iCnt;
+        }
+        System.out.println(iFact);
     }
 }
 

@@ -9,11 +9,20 @@ class Logic
     /**
      * Method Name: printDigits
      * Description: Accepts an integer and prints each of its digits separately.
-     * @param   num   The number whose digits are to be printed.
+     *    num   The number whose digits are to be printed.
      */
     void printDigits(int num) 
-    {
-        // Write logic here
+    {   
+        int iDig = 0;
+        while (num != 0) 
+        {
+            iDig = num % 10;
+
+            System.out.println(iDig);
+
+            num /= 10;
+
+        }
     }
 }
 

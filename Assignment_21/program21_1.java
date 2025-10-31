@@ -1,5 +1,3 @@
-package Assignment_21;
-
 /**
  * Class Name: Logic
  * Description: Contains the business logic to calculate the product of digits of a number.
@@ -11,11 +9,25 @@ class Logic
     /**
      * Method Name: productOfDigits
      * Description: Accepts an integer and calculates the product of its digits.
-     * @param   num   The number to be processed.
+     *   num   The number to be processed.
      */
     void productOfDigits(int num) 
     {
-        // Write logic here
+        int iPro = 1;
+        int iDig = 0;
+        while (num != 0) 
+        {
+            iDig = (num % 10);
+            
+            if(iDig == 0)
+            {
+                System.out.println(0);
+                return;
+            }
+            iPro *= iDig;
+            num /= 10;
+        }
+        System.out.println(iPro);
     }
 }
 

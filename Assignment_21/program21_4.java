@@ -1,4 +1,3 @@
-package Assignment_21;
 
 /**
  * Class Name: Logic
@@ -11,11 +10,20 @@ class Logic
     /**
      * Method Name: countFactors
      * Description: Accepts an integer and counts the total number of its factors.
-     * @param   num   The number whose factors are to be counted.
+     *    num   The number whose factors are to be counted.
      */
     void countFactors(int num) 
     {
-        // Write logic here
+        int iCnt = 0;
+        int iCount = 0;
+        for(iCnt = 1;iCnt <= (num/2);iCnt++)
+        {
+            if(num % iCnt == 0)
+            {
+                iCount ++;
+            }
+        }
+        System.out.print(iCount+1);
     }
 }
 

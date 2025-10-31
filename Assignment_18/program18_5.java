@@ -9,11 +9,22 @@ class Logic
     /**
      * Method Name: checkSign
      * Description: Accepts an integer and checks whether it is positive, negative, or zero.
-     * @param   num   The number to be checked.
+     *    num   The number to be checked.
      */
     void checkSign(int num) 
     {
-        // Write logic here
+        if(num < 0)
+        {
+            System.out.println(num+" is negative");
+        }
+        else if(num > 0)
+        {
+            System.out.println(num+" is positive");
+        }
+        else
+        {
+            System.out.println(num+" is zero");
+        }
     }
 }
 

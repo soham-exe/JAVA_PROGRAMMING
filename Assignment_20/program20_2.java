@@ -9,11 +9,16 @@ class Logic
     /**
      * Method Name: printReverse
      * Description: Accepts an integer N and prints numbers from N down to 1 in reverse order.
-     * @param   n   The starting number from which to print in reverse.
+     *    n   The starting number from which to print in reverse.
      */
     void printReverse(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+
+        for(iCnt = n;iCnt >= 1;iCnt--)
+        {
+            System.out.println(iCnt);
+        }
     }
 }
 

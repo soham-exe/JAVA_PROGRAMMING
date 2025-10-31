@@ -9,13 +9,28 @@ class Logic
     /**
      * Method Name: findMin
      * Description: Accepts three integers and finds the minimum of the three.
-     * @param   a   The first integer.
-     * @param   b   The second integer.
-     * @param   c   The third integer.
+     *    a   The first integer.
+     *    b   The second integer.
+     *   c   The third integer.
      */
     void findMin(int a, int b, int c) 
     {
-        // Write logic here
+        if(a < b && a < c)
+        {
+            System.out.println(a+" is smaller than "+b+" and "+c);
+        }
+        else if(b < a && b < c)
+        {
+            System.out.println(b+" is smaller than "+a+" and "+c);
+        }
+        else if(c < a && c < b)
+        {
+            System.out.println(c+" is smaller than "+a+" and "+b);
+        }
+        else if(a == b && b == c)
+        {
+            System.out.println("All numbers are Equal");
+        }
     }
 }
 

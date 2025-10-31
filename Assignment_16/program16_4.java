@@ -9,11 +9,16 @@ class Logic
     /**
      * Method Name: reverseNumber
      * Description: Accepts an integer and reverses it.
-     * @param   num   The number to be reversed.
+     *   num   The number to be reversed.
      */
     void reverseNumber(int num) 
     {
-        // Write logic here
+        while (num != 0) 
+        {
+            System.out.print(num % 10);
+            
+            num /= 10;
+        }
     }
 }
 

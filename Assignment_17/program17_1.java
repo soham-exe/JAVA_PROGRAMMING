@@ -9,11 +9,21 @@ class Logic
     /**
      * Method Name: sumOfDigits
      * Description: Accepts an integer and finds the sum of its digits.
-     * @param   num   The number whose digits are to be summed.
+     *  num   The number whose digits are to be summed.
      */
     void sumOfDigits(int num) 
     {
-        // Write logic here
+        int iSum = 0;
+
+        while (num != 0) 
+        {
+            if(num % 10 != 0)
+            {
+                iSum += (num % 10);
+            }    
+            num /= 10;
+        }
+        System.out.println(iSum);
     }
 }
 

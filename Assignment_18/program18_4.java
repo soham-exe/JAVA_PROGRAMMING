@@ -9,11 +9,27 @@ class Logic
     /**
      * Method Name: sumEvenOddDigits
      * Description: Accepts an integer and finds the sum of its even and odd digits separately.
-     * @param   num   The number to be processed.
+     *   num   The number to be processed.
      */
     void sumEvenOddDigits(int num) 
     {
-        // Write logic here
+        int iEvenSum = 0;
+        int iOddSum = 0;
+
+        while (num != 0) 
+        {
+            if(((num % 10) % 2) == 0)
+            {
+                iEvenSum += (num % 10);
+            }
+            else
+            {
+                iOddSum += (num % 10);
+            }
+            num /= 10;
+        }
+        System.out.println("sum of even "+iEvenSum);
+        System.out.println("sum of odd "+iOddSum);
     }
 }
 

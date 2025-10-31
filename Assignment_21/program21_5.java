@@ -1,4 +1,3 @@
-package Assignment_21;
 /**
  * Class Name: Logic
  * Description: Contains the business logic to find numbers divisible by specific values.
@@ -10,11 +9,19 @@ class Logic
     /**
      * Method Name: printDivisibleBy2And3
      * Description: Accepts an integer N and prints all numbers from 1 to N that are divisible by both 2 and 3.
-     * @param   n   The upper limit of the range.
+     *    The upper limit of the range.
      */
     void printDivisibleBy2And3(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+
+        for(iCnt = 1;iCnt <= n;iCnt++)
+        {
+            if(iCnt % 2 == 0 && iCnt % 3 == 0)
+            {
+                System.out.print(iCnt+" ");
+            }
+        }
     }
 }
 

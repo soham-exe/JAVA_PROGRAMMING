@@ -9,11 +9,21 @@ class Logic
     /**
      * Method Name: countDigits
      * Description: Accepts an integer and counts the number of digits in it.
-     * @param   num   The number whose digits are to be counted.
+     *    num   The number whose digits are to be counted.
      */
     void countDigits(int num) 
-    {
-        // Write logic here
+    {   
+        int iCnt = 0;
+        while (num != 0) 
+        {
+            if((num % 10 != 0) || (num % 10 == 0))
+            {
+                iCnt ++;
+            }
+            num /= 10;
+
+        }
+        System.out.println(iCnt);
     }
 }
 

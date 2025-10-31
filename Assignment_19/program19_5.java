@@ -9,12 +9,20 @@ class Logic
     /**
      * Method Name: calculatePower
      * Description: Accepts a base and an exponent and calculates the power of the number using loops.
-     * @param   base   The base number.
-     * @param   exp    The exponent.
+     *   base   The base number.
+     *   exp    The exponent.
      */
     void calculatePower(int base, int exp) 
     {
-        // Write logic here
+        int iPow = 1;
+        
+        int iCnt = 0;
+
+        for(iCnt = 1;iCnt <= exp;iCnt++)
+        {
+            iPow *=base;
+        }
+        System.out.println(iPow);
     }
 }
 

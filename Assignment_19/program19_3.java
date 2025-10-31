@@ -9,11 +9,14 @@ class Logic
     /**
      * Method Name: checkDivisible
      * Description: Accepts an integer and checks whether it is divisible by both 5 and 11.
-     * @param   num   The number to be checked.
+     *    num   The number to be checked.
      */
     void checkDivisible(int num) 
     {
-        // Write logic here
+        if(num % 5 == 0 && num % 11 == 0)
+        {
+            System.out.println(num+" is divisible by both 5 and 11");
+        }
     }
 }
 

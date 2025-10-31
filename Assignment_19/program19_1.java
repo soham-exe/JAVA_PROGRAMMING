@@ -9,11 +9,14 @@ class Logic
     /**
      * Method Name: checkLeapYear
      * Description: Accepts an integer year and checks whether it is a leap year or not.
-     * @param   year   The year to be checked.
+     *    year   The year to be checked.
      */
     void checkLeapYear(int year) 
     {
-        // Write logic here
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0 )
+        {
+            System.out.println(year+" is a leap year");
+        }
     }
 }
 

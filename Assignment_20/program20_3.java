@@ -9,11 +9,28 @@ class Logic
     /**
      * Method Name: checkPerfect
      * Description: Accepts an integer and checks whether it is a perfect number or not.
-     * @param   num   The number to be checked.
+     *    num   The number to be checked.
      */
     void checkPerfect(int num) 
     {
-        // Write logic here
+        int iSum = 0;
+        int iCnt = 0;
+
+        for(iCnt = 1;iCnt <= (num/2);iCnt++)
+        {   
+            if(num % iCnt == 0)
+            {    
+                iSum += iCnt;
+            }
+        }
+        if(num == iSum)
+        {
+        System.out.println(num+" is a perfect number");
+        }
+        else
+        {
+            System.out.println(num+" is not a perfect number");
+        }
     }
 }
 

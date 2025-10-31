@@ -9,11 +9,15 @@ class Logic
     /**
      * Method Name: printEvenNumbers
      * Description: Accepts an integer N and prints all even numbers up to N.
-     * @param   n   The upper limit for printing even numbers.
+     *    n   The upper limit for printing even numbers.
      */
     void printEvenNumbers(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+        for(iCnt = 2; iCnt <= n;iCnt += 2)
+        {
+            System.out.print(iCnt+"   ");
+        }
     }
 }
 

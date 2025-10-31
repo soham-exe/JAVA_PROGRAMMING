@@ -1,4 +1,3 @@
-package Assignment_21;
 
 /**
  * Class Name: Logic
@@ -11,11 +10,27 @@ class Logic
     /**
      * Method Name: countEvenOddRange
      * Description: Accepts an integer N and counts how many even and odd numbers are present between 1 and N.
-     * @param   n   The upper limit of the range.
+     *   n   The upper limit of the range.
      */
     void countEvenOddRange(int n) 
     {
-        // Write logic here
+        int iCnt = 0;
+        int EvenCnt = 0;
+        int OddCnt = 0;
+
+        for(iCnt = 1;iCnt <= n;iCnt++)
+        {
+            if(iCnt % 2 == 0)
+            {
+                EvenCnt ++;
+            }
+            else if(iCnt % 2 != 0)
+            {
+                OddCnt ++;
+            }
+        }
+        System.out.println("Even: "+EvenCnt);
+        System.out.println("Odd: "+OddCnt);
     }
 }
 
