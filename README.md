@@ -44,31 +44,7 @@ To compile and run a Java program, you need to have the Java Development Kit (JD
 
 ## Repository Structure
 
-JAVA_PROGRAMMING/
-|
-├── Assignments/
-|   │
-|   ├── Assignment_16/
-|   │   ├── program16_1.java
-|   │   ├── program16_1.class
-|   │   ├── program16_2.java
-|   │   ├── program16_2.class
-|   │
-|   ├── Assignment_17/
-|   │   ├── program17_1.java
-|   │   ├── program17_1.class
-|   │   ├── program17_2.java
-|   │   ├── program17_2.class
-|   │
-|
-├── Classwork/
-|   ├── program3.java
-|   ├── program3.class
-|   ├── program18.java
-|   ├── program18.class
-|   |
-|
-└── README.md
+JAVA_PROGRAMMING/ | ├── Assignments/ | │ | ├── Assignment_1/ | │ ├── Program1_1.java | │ ├── Program1_2.java | │ | ├── Assignment_2/ | │ ├── Program2_1.java | │ ├── Program2_2.java | │ | ├── Classwork/ | ├── Program1.java | ├── Program2.java | | | └── README.md
 
 ---
 
