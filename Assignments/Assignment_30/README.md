@@ -13,6 +13,7 @@ PROGRAM2:
 | 2 | `int iRow = 6, iCol = 6;`<br>`Pattern(iRow, iCol);` | `* * * * * *`<br>`* * * * * #`<br>`* * * * # #`<br>`* * * # # #`<br>`* * # # # #`<br>`* # # # # #` |
 | 3 | `int iRow = 4, iCol = 3;`<br>`Pattern(iRow, iCol);` | `Invalid InputRow number and column number should be same` |
 | 4 | `int iRow = 3, iCol = 3;`<br>`Pattern(iRow, iCol);` | `* * *`<br>`* * #`<br>`* # #` |
+
 PROGRAM3:
 | Sr. No. | Input Code (`main` method) | Output |
 | :---: | :--- | :--- |
