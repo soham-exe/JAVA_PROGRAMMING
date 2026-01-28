@@ -12,7 +12,7 @@ import java.io.*;
 //
 ////////////////////////////////////////////////////////////////////////////////
 /// 
-class program58_4
+class program58_5
 {
     public static void main(String[] args)throws IOException
     {
