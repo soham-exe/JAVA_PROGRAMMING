@@ -1,0 +1,239 @@
+
+-----------------------------
+File Name: hello.txt
+Size: 12
+Data: 
+hello World!
+
+-----------------------------
+File Name: program56_1.java
+Size: 982
+Data: 
+import java.util.*;
+import java.io.*;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Description   : Checks if the file exists or not
+//  Input         : Nothing
+//  Output        : Nothing
+//  Author        : Soham Sachin Sonar
+//  Date          : 28/01/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program56_1
+{
+    public static void main(String[] args)
+    {
+        Scanner Sobj = new Scanner(System.in);
+        System.out.println("Enter the Name of the file that you want to open: ");
+        String FileName = Sobj.nextLine();
+    
+        File Obj = new File(FileName);
+        
+        if(Obj.exists())
+        {
+            System.out.println("File Opened Successfully!\n");
+        }
+        else
+        {
+            System.err.println("File Not Found Exception\n");
+        }
+        
+        Sobj.close();
+    }
+}
+
+-----------------------------
+File Name: program56_2.java
+Size: 1195
+Data: 
+import java.util.*;
+import java.io.*;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Description   : read the contents of the file
+//  Input         : String
+//  Output        : Contents of the file
+//  Author        : Soham Sachin Sonar
+//  Date          : 28/01/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program56_2
+{
+    public static void main(String[] args)
+    {
+        Scanner Sobj = new Scanner(System.in);
+        System.out.println("Enter the File Name: ");
+        String FileName = Sobj.nextLine();
+        try
+        {
+            File Obj = new File(FileName);
+            Scanner Reader = new Scanner(Obj);
+            
+            System.out.println("Reading File Contents...\n");
+          	while (Reader.hasNextLine()) {
+                String data = Reader.nextLine();
+                System.out.println(data);
+            }
+            Reader.close();
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("File not found!\n"+e);
+        }        
+        Sobj.close();
+    }
+}
+
+-----------------------------
+File Name: program56_3.java
+Size: 1178
+Data: 
+import java.util.*;
+import java.io.*;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Description   : appends given data to the file
+//  Input         : nothing
+//  Output        : nothing
+//  Author        : Soham Sachin Sonar
+//  Date          : 28/01/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program56_3
+{
+    public static void main(String[] args)
+    {
+        Scanner Sobj = new Scanner(System.in);
+        System.out.println("Enter the File Name: ");
+        String FileName = Sobj.nextLine();
+        System.out.println("Enter the Data to write: ");
+        String data = Sobj.nextLine();
+        try
+        {
+            FileWriter writer = new FileWriter(FileName,true);
+            writer.append(data);
+            writer.close();
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("File not found!\n"+e);
+        }        
+        catch(IOException e)
+        {
+            System.out.println("an error occured!\n"+e);
+        }        
+        Sobj.close();
+    }
+}
+
+-----------------------------
+File Name: program56_4.java
+Size: 1166
+Data: 
+import java.util.*;
+import java.io.*;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Description   : creates a file if it does not exist already
+//  Input         : nothing
+//  Output        : nothing
+//  Author        : Soham Sachin Sonar
+//  Date          : 28/01/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program56_4
+{
+    public static void main(String[] args)
+    {
+        Scanner Sobj = new Scanner(System.in);
+        System.out.println("Enter the File Name: ");
+        String FileName = Sobj.nextLine();
+        try
+        {
+            File f = new File(FileName);
+            if(f.exists())
+            {
+                System.out.println("File already exists!\n");
+            }
+            else
+            {
+                f.createNewFile();
+                System.out.println("File "+FileName+" got created!\n");
+            }
+
+        }    
+        catch(IOException e)
+        {
+            System.out.println("an error occured!\n"+e);
+        }        
+        Sobj.close();
+    }
+}
+
+-----------------------------
+File Name: program56_5.java
+Size: 1263
+Data: 
+import java.util.*;
+import java.io.*;
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : main
+//  Description   : lists the files from the specified directory
+//  Input         : nothing
+//  Output        : nothing
+//  Author        : Soham Sachin Sonar
+//  Date          : 28/01/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+class program56_5
+{
+    public static void main(String[] args)
+    {
+        Scanner Sobj = new Scanner(System.in);
+        System.out.println("Enter the File Name: ");
+
+        String directoryPath = "D:\\JAVA_PROGRAMMING\\Assignments\\"+Sobj.nextLine();
+        
+        File directory = new File(directoryPath);
+        
+        if(directory.exists())
+        {
+            File[] files = directory.listFiles();
+            
+            System.out.println("LIST OF THE FILES IN THE DIRECTORY: \n");
+
+            if (files != null) {
+                for (File file : files) 
+                {
+                    System.out.println(file.getName());
+                }
+            }
+        }
+        else
+            System.err.println("no such directory found!\n");
+        Sobj.close();
+    }
+}
+
+-----------------------------
+File Name: README.md
+Size: 17
+Data: 
+
+# File Handling

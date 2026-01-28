@@ -1,10 +1,11 @@
-import java.util.*;
 import java.io.*;
+import java.security.MessageDigest;
+import java.util.Scanner;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  Function Name : main
-//  Description   : creates new directory
+//  Description   : calculate checksum
 //  Input         : nothing
 //  Output        : nothing
 //  Author        : Soham Sachin Sonar
@@ -18,39 +19,45 @@ class program57_4
     {
         Scanner sobj = new Scanner(System.in);
 
-        System.out.println("Enter the name: ");
+        System.out.print("Enter the file name: ");
         String FileName = sobj.nextLine();
         sobj.close();
         
         try
         {
-            File f = new File(FileName);
-            Scanner Read = new Scanner(f);
-            String CheckSum = "";
-            ArrayList<String> data = new ArrayList<>();
-            while (Read.hasNextLine())
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            
+            FileInputStream fis = new FileInputStream(FileName);
+            
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+            
+            while ((bytesRead = fis.read(buffer)) != -1) 
             {
-                data.add(Read.nextLine());
+                md.update(buffer, 0, bytesRead);
+            }
+            fis.close();
+
+            
+            byte[] hashBytes = md.digest();
+
+            
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashBytes) 
+            {
+                // making hex
+                sb.append(String.format("%02x", b));
             }
             
-            for(String b : data) 
-            {
-                if (b != null)
-                {   
-                    char c = '\0';
-                     for(int i = 0 ;i < b.length()-1;i++)
-                     {
-                        c = b.charAt(i);
-                        CheckSum += b.format(" %02x",);
-                     }
-                }
-            }
-            Read.close();
+            System.out.println("File Checksum: " + sb.toString());
         }
         catch(FileNotFoundException e)
         {
-            System.err.println("File not found!\n"+ e.getMessage());
+            System.err.println("File not found! " + e.getMessage());
         }
-        
+        catch(Exception e)
+        {
+            System.err.println("Error calculating checksum: " + e.getMessage());
+        }
     }
 }
